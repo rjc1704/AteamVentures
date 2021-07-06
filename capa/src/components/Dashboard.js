@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
 import styled from "styled-components";
 import D_Header from "./D_Header";
 import D_Body from "./D_Body";
@@ -15,12 +15,10 @@ const PageWrapper = styled.div`
 export default function Dashboard() {
   const [isOpenMobileMenu, setIsOpenMobileMenu] = useState(false);
   const openMobileMenu = () => {
-    console.log("메뉴열림!");
     setIsOpenMobileMenu(true);
     document.body.style.overflow = "hidden";
   };
   const closeMenu = () => {
-    console.log("메뉴닫힘!");
     setIsOpenMobileMenu(false);
     document.body.style.overflow = "auto";
   };

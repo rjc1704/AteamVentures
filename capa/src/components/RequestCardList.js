@@ -21,8 +21,7 @@ export default function RequestCardList({
 }) {
   const [cards, setCards] = useState([]);
   const url = "http://localhost:3000/requests";
-  console.log(`selectedMethod in 22: `, selectedMethod);
-  console.log(`selectedMaterial in 23:`, selectedMaterial);
+
   useEffect(() => {
     axios
       .get(`${url}`)
@@ -35,7 +34,6 @@ export default function RequestCardList({
         let statusFiltered = [];
         //! 가공방식 필터가 존재하는 경우
         if (selectedMethod.length > 0) {
-          // 선반
           resData.forEach((card) => {
             card.method.forEach((cardMethod) => {
               selectedMethod.forEach((selected) => {
